@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 .clearfix::after{
     content: "";
@@ -13,45 +14,105 @@
 header{
     width: 100%;
     position: relative;
-    height: 50px;
-    
-   
+    height: 50px;   
 }
 .barra{
     position: fixed;
-    background-color: red;
     width: 100%;
     height: 50px;
     z-index: 3;
+    background-color: white;
 }
 .menu{
     height: 100%;
-    width: 40%;
-    background-color: pink;
+    width: 45%;
 }
 .menu-sx{
     float: left;
- 
 }
+.menu-sx ul li{
+    display: inline-block;
+    height: 50px;
+    margin: 0 20px 0 15px;
+}
+.menu-sx ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+.menu-sx img{
+    vertical-align: text-bottom;
+    height: 20px;
+}
+
 .menu-dx{
     float: right;
-    
+    text-align: right;
+}
+.menu-dx ul li{
+    display: inline-block;
+    height: 50px;
+    margin: 0 15px 0 20px;
+}
+.menu-dx ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
 }
 
 /* Jumbotron*/
 
 .jumbotron{
-    background-color: blue;
-    height: 400px;
+    background-color: rgb(115, 156, 218);
+    height: 600px;
     position: relative;
 }
 #jumbo-img{
-    height: 50%;
-    width: 40%;
     position: absolute;
-    top: 60%;
-    right: 20%;
-    background-color: cyan;
+    top: 49%;
+    right: 9%;
+}
+#jumbo-img img{
+    width: 650px;
+}
+.titolo{
+    width: 80%;
+    margin: auto;
+    padding-top: 50px;
+    text-align: left;
+    font-size: 38px;
+}
+.jumbotron .articolo{
+    width: 28%;
+    margin-top: 40px;
+    margin-left: 10%;
+    font-size: 14px;
+}
+.articolo p{
+    margin-bottom: 30px;
+}
+.btn{
+    text-align: center;
+    color: white;
+    background-color: rgb(59, 59, 255);
+    padding: 5px 15px;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+#annulla{
+    margin-top: 15px;
+}
+.articolo a i{
+    color: black;
+    font-size: 40px;
 }
 
 /* Main */
@@ -66,57 +127,151 @@ section{
 
 #bsns-plan{
     padding: 40px 0 20px 0;
-    background-color: green;
 }
 .title{
-    padding-top: 40px;
+    margin-top: 60px;
     width: 100%;
     height: 120px;
-    background-color: darkkhaki;
+} 
+.title h3{
+    font-size: 34px;
+    margin-bottom: 30px;
+}
+#radiobtn1{
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    border: 5px solid blue;
+    border-radius: 50%;
+
+}
+#radiobtn2{
+    margin-left: 10px;
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    border: 1px solid lightgrey;
 }
 .col{
     float: left;
     width: 30%;
-    height: 500px;
+}
+#bsns-plan .col{
+    border: 1px solid grey;
     margin-top: 20px;
     margin-bottom: 30px;
+    height: 750px;
 }
-.col-sx{
-    background-color: darkslategray;
+.plan-type, .infos{
+    width: 90%;
+    margin: auto;
+    font-size: 13px;
+}
+h4{
+    margin-top: 20px;
+    font-size: 27px;
+}
+.price{
+    font-weight: bold;
+}
+.specifiche{
+    font-weight: 300;
+}
+.plan-type mark{
+    background-color: transparent;
+    text-decoration: underline;
+    color: blue;
+}
+.plan-type span{
+    display: block;
+    margin: 15px 0 15px 0;
+}
+.kind{
+    line-height: 30px;
+    vertical-align: middle;
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+.line{
+    width: 20%;
+    margin-left: 5%;
+    border-bottom: 2px solid lightgrey;
+}
+.infos h5{
+    margin-top: 20px;
+    font-size: 13px;
+}
+.infos ul{
+    position: relative;
+    padding-left: 0;
+}
+.infos ul li{
+    margin-top: 15px;
+    padding-left: 7%;
+    list-style-type: none;
+    position: relative;
+}
+.infos ul li::before{
+    content: '\2713';
+    display: inline-block;
+    color: blue;
+    font-weight: bolder;
+    padding: 0 3px 0 0;
+    position: absolute;
+    left: 0;
 }
 .col-mid{
     margin-left: 5%;
     margin-right: 5%;
-    background-color: greenyellow;
 }
-.col-dx{
-    background-color: darkgreen;
-
-}
-.enterprise{
+#enterprise{
     width: 100%;
-    margin: 20px 0;
-    height: 60px;
-    background-color: darkseagreen;
+    border: 1px solid grey;
 }
-
+.enterprise-description{
+    float: left;
+    width: 70%;
+}
+.enterprise-button{
+    float: left;
+    width: 30%;
+}
+.enterprise-description span{
+    display: block;
+    font-size: 12px;
+    margin: 15px 0;
+}
 
 /* Seconda sezione */
 
-#partner{
-    background-color: yellow;
-}
 #partner .immagine{
     float: left;
     width: 50%;
-    height: 300px;
-    background-color: goldenrod;
+}
+#partner .immagine img{
+    width: 100%;
 }
 #partner .articolo{
     float: left;
     width: 50%;
-    height: 300px;
-    background-color: coral;
+    padding-left: 4%;
+}
+#partner .articolo h4{
+    font-size: 22px;
+}
+#partner .articolo p{
+    margin-top: 25px;
+    font-size: 15px;
+}
+.btn2{
+    background-color: white;
+    border: 1px solid black;
+}
+.btn2 a{
+    color: black;
 }
 
 
@@ -124,43 +279,125 @@ section{
 
 /* Terza sezione*/
 
-#plan-description{
-    background-color: orange;
+.col img{
+    width: 100%;
+}
+#plan-description .col{
+    margin-bottom: 40px;
+}
+#plan-description .articolo h4{
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+#plan-description .articolo p{
+    font-size: 13px;
 }
 
 /* Quarta sezione */
 
 #partnerships{
     width: 100%;
-    background-color: gray;
 }
 #partnerships .title{
-    width: 70%;
-    margin: auto;
+    width: 40%;
+    margin-left: 15%;
+    height: fit-content;
+    padding-bottom: 30px;
+}
+#partnerships .title h4{
+    font-size: 35px;
+    margin-bottom: 40px;
 }
 .square{
     width: 30vw;
     height: 30vw;
 }
+#partnerships .square .item{
+    width: 50%;
+    height: 50%;
+    float: left;
+    display: inline-block;
+    position: relative;
+}
+.item1{
+    background-color: rgb(122, 194, 122);
+    border: 10px solid rgb(194, 233, 194);
+}
+.item2{
+    background-color: rgb(75, 7, 33);
+}
+.item3{
+    background-color: royalblue;
+}
+.item4{
+    background-color: rgb(243, 59, 59);
+}
+.item5{
+    background-color: rgb(158, 27, 66);
+}
+.item6{
+    background-color: rgb(150, 178, 219);
+}
+.item7{
+    background-color: rgb(16, 16, 143);
+}
+.item8{
+    background-color: rgb(241, 241, 188);
+}
+.item img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0) brightness(100%) contrast(100%);
+}
+
+
 .square-sx{
     float: left;
-    background-color: lightgrey;
 }
 .window{
+    padding: 3%;
     width: calc(100% - 60vw);
     height: 30vw;
     float: left;
-    background-color: steelblue;
-
+    background-color: rgb(241, 241, 241);
+}
+.line2{
+    width: 10%;
+    margin: 30px 0;
+    border-bottom: 2px solid lightgrey;
+}
+.window p{
+    margin-bottom: 40px;
+}
+.window img{
+    width: 30%;
 }
 .square-dx{
     float: right;
     background-color: wheat;
 }
 .banner{
+    position: relative;
     width: 100%;
-    height: 200px;
-    background-color: darkorchid;
+    height: 300px;
+    background-color: rgb(165, 190, 228);
+}
+.banner h4{
+    color: rgb(88, 17, 88);
+    width: 30%;
+    font-size: 32;
+    position: absolute;
+    left: 16%;
+    top: 50%;
+    transform: translate(0,-70%);
+}
+.banner span{
+    position: absolute;
+    top: 40%;
+    right: 16%;
 }
 
 
