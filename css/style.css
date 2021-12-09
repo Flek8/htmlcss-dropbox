@@ -26,6 +26,7 @@ header{
 .menu{
     height: 100%;
     width: 45%;
+    font-size: 14px;
 }
 .menu-sx{
     float: left;
@@ -55,15 +56,58 @@ header{
 .menu-dx ul li{
     display: inline-block;
     height: 50px;
+    line-height: 50px;
     margin: 0 15px 0 20px;
 }
 .menu-dx ul li a{
     display: inline-block;
     text-decoration: none;
+    height: fit-content;
     color: black;
-    height: 50px;
-    line-height: 50px;
+    line-height: normal;
     vertical-align: middle;
+}
+.menu-dx .btn{
+    color: white;
+}
+.menu li:hover{
+    border-bottom: 3px solid grey;
+}
+#supporto:hover #menu-tendina{
+    visibility: visible;
+}
+#menu-tendina{
+    width: 145px;
+    height: fit-content;
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    right: 26%;
+    font-size: 12px;
+    border: 1px solid gray;
+    background-color: lightgray;
+    visibility: hidden;
+}
+#menu-tendina ul{
+    line-height: 20px;
+}
+#menu-tendina li{
+    display: inline-block;
+    text-align: left;
+    height: fit-content;
+    width: 100%;
+    padding: 3px;
+    margin-top: 0;
+    margin: 0;
+    text-align: center;
+}
+#menu-tendina li a{
+    display: block;
+    margin-top: 0;
+}
+#menu-tendina li:hover{
+    border: 0;
+    background-color: rgb(184, 180, 180);
 }
 
 /* Jumbotron*/
@@ -161,7 +205,7 @@ section{
     border: 1px solid grey;
     margin-top: 20px;
     margin-bottom: 30px;
-    height: 750px;
+    min-height: 750px;
 }
 .plan-type, .infos{
     width: 90%;
@@ -353,7 +397,7 @@ h4{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
-    filter: invert(100%) sepia(0%) saturate(100%) hue-rotate(0) brightness(100%) contrast(100%);
+    filter: invert();
 }
 
 
@@ -374,6 +418,7 @@ h4{
 }
 .window p{
     margin-bottom: 40px;
+    overflow-y: auto;
 }
 .window img{
     width: 30%;
@@ -391,7 +436,7 @@ h4{
 .banner h4{
     color: rgb(88, 17, 88);
     width: 30%;
-    font-size: 32;
+    font-size: 32px;
     position: absolute;
     left: 16%;
     top: 50%;
@@ -401,6 +446,9 @@ h4{
     position: absolute;
     top: 40%;
     right: 16%;
+}
+.banner .btn{
+    border-color: rgb(165, 190, 228);
 }
 
 
@@ -417,20 +465,32 @@ h4{
 
 .question{
     width: 100%;
-    height: 80px;
+    height: fit-content;
+    min-height: 80px;
     position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.question:hover p{
+    display: block;
 }
 .question span{
-    height: 80px;
-    line-height: 80px;
+    display: block;
+    height: fit-content;
     vertical-align: middle;
     font-weight: bold;
 }
 .question i{
     position: absolute;
-    top: 50%;
+    top: 60px;
     right: 5%;
     transform: translate(0,-50%);
+}
+.question p{
+    margin-top: 15px;
+    width: 85%;
+    font-size: 14px;
+    display: none;
 }
 .question-1{
                            
@@ -452,7 +512,7 @@ footer{
     background-color: black;
 }
 footer .container{
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 .categoria{
@@ -464,7 +524,7 @@ footer .container{
 .categoria ul{
     display: inline-block;
     vertical-align: top;
-    margin: 30px 25px;
+    margin: 30px 90px 30px 0;
 }
 .categoria div ul li{
     display: block;
